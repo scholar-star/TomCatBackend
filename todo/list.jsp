@@ -13,6 +13,9 @@
 </head>
 <body>
     <h1>List Page</h1>
+    <h2>${appName}</h2> <!--appName ServletContext-->
+    <h2>${loginInfo}</h2>
+    <h3>${loginInfo.mname}</h3>
     <ul>
         <c:forEach items="${dtoList}" var="dto">
             <li>
@@ -23,5 +26,8 @@
             </li>
         </c:forEach>
     </ul>
+    <form action="/logout" method="post">
+        <button>LOGOUT</button>
+    </form>
 </body>
 </html>
